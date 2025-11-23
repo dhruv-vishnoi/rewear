@@ -33,10 +33,4 @@ app.listen(5001, () => console.log("Server running on port 5001"));
 
 const path = require("path");
 
-// Serve frontend
-app.use(express.static(path.join(__dirname, "build")));
-
-app.get("*", (req, res) => {
-  res.sendFile(path.join(__dirname, "build", "index.html"));
-});
 
